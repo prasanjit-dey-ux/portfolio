@@ -4,6 +4,21 @@
   --background: #ffffff;
   --foreground: #171717;
   --text-primary: #505050;
+  --accent: #1100FF
+}
+
+@layer utilities {
+  .dither-effect {
+    filter: grayscale(1) contrast(1.5) brightness(1.2) url(#bayer-dither);
+  }
+}
+
+/* Hidden SVG used for the filter calculation */
+.svg-filter-hidden {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .dark {
