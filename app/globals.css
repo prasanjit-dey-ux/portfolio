@@ -2,14 +2,47 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1a1a1a;
   --text-primary: #505050;
-  --accent: #1100FF
+  --text-secondary: #737373;
+  --accent: #1100FF;
+  --border-color: #e5e5e5;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --text-primary: #a3a3a3;
+  --text-secondary: #737373;
+  --border-color: #262626;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary-text: var(--text-primary);
+  --color-secondary-text: var(--text-secondary);
+  --color-accent: var(--accent);
+  --color-border: var(--border-color);
+  
+  --font-manrope: var(--font-manrope);
+  --font-inter: var(--font-inter);
+  
+  /* Font sizes - font-lg = 18px as specified */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
 }
 
 @layer utilities {
   .dither-effect {
     filter: grayscale(1) contrast(1.5) brightness(1.2) url(#bayer-dither);
+  }
+  
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -21,21 +54,8 @@
   overflow: hidden;
 }
 
-.dark {
-  --background: #171717;
-  --forground: #ffffff;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-manrope: var(--font-manrope);
-  --font-inter: var(--font-inter);
-  --color-primary-text: var(--text-primary);
-}
-
-
 body {
   background: var(--background);
   color: var(--foreground);
+  font-size: var(--font-size-lg);
 }
