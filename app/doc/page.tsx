@@ -106,7 +106,7 @@ export default function App() {
                 meaningful experiences.
               </p>
               <p>
-                When I'm offline, I'm usually busy with Ashtanga yoga, horses and my Frenchie.
+                When Im offline, Im usually busy with Ashtanga yoga, horses and my Frenchie.
               </p>
               <p>CV and latest portfolio of work available upon request.</p>
             </div>
