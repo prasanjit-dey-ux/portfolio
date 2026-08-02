@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { ThemeToggle } from './theme-toggle';
 
 export const Header = () => {
   const [currentTime, setCurrentTime] = useState('');
@@ -30,12 +31,15 @@ export const Header = () => {
           Prasanjit Dey
         </h1>
 
-        {/* Column 2 - Time */}
-        <p className="whitespace-nowrap text-primary-text">
-          {currentTime || '03:40 PM'}
-        </p>
+        {/* Column 2 - Time + Theme Toggle */}
+        <div className="flex items-center gap-1.5">
+          <ThemeToggle />
+          <p className="whitespace-nowrap text-primary-text">
+            {currentTime || '03:40 PM'}
+          </p>
+        </div>
 
-        {/* Column 3 - CTA */}
+        {/* Column 3 - Skills */}
                <div className="flex flex-col gap-10 text-right text-base">
           <div className="flex justify-between w-72">
             <p className="text-primary-text">Design</p>
@@ -58,7 +62,7 @@ export const Header = () => {
           </div>
         </div>
 
-        {/* Column 4 - Skills */}
+        {/* Column 4 - CTA */}
 
 
          <a 
@@ -71,4 +75,3 @@ export const Header = () => {
     </header>
   );
 };
-
