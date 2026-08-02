@@ -13,8 +13,8 @@ export const ProjectCard = ({
       {/* 1. Card Container: Fixed aspect ratio, sharp corners */}
       <div
         className={cn(
-          "relative aspect-4/3 overflow-hidden flex items-center justify-center transition-all duration-500 rounded-none bg-neutral-100",
-          !hasBackground && "bg-neutral-50"
+          "relative aspect-4/3 overflow-hidden flex items-center justify-center transition-all duration-500 rounded-none bg-border dark:bg-[#1a1a1a]",
+          !hasBackground && "bg-[#fafafa] dark:bg-[#141414]"
         )}
         style={{ 
           backgroundColor: bgColor,
@@ -61,14 +61,14 @@ export const ProjectCard = ({
       {/* 4. Details */}
       <div className="pt-4 space-y-1">
         <div className="flex justify-between items-baseline">
-          <h3 className="text-lg font-inter text-neutral-900">{title}</h3>
+          <h3 className="text-lg font-inter text-foreground">{title}</h3>
           {visitLink && (
-            <a href={visitLink} target="_blank" rel="noopener noreferrer" className="text-base  text-accent ">
+            <a href={visitLink} target="_blank" rel="noopener noreferrer" className="text-base text-accent ">
               Visit
             </a>
           )}
         </div>
-        <p className="text-lg text-neutral-500 leading-snug line-clamp-2 font-inter">{desc}</p>
+        <p className="text-lg text-secondary-text leading-snug line-clamp-2 font-inter">{desc}</p>
       </div>
     </div>
   );
